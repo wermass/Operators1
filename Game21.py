@@ -12,9 +12,9 @@ def calculate_score(hand):
 
 
 player_hand = [get_card(), get_card()]
-print(player_hand)
+print(player_hand)  # лишняя строка
 dealer_hand = [get_card(), get_card()]
-print(dealer_hand)
+print(dealer_hand)  # лишняя строка
 print(calculate_score(player_hand), calculate_score(dealer_hand))
 print("Добро пожаловать в игру 21!")
 while True:
@@ -24,7 +24,7 @@ while True:
         print("Вы выиграли! У вас 21.")
         break
     elif player_score > 21:
-        print("Перебор! Диллер проиграл.")
+        print("Перебор! Диллер проиграл.")  # проигрывает не диллер, обрати внимание
         break
     action = input("Хотите взять карту?(да/нет)")
     if action.lower() == "да":
