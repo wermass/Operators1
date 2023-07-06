@@ -40,9 +40,9 @@ while True:
     else:
         dealer_hand.append(get_card())
 if player_score == 21 and dealer_score == 21:
-        print("Диллер выиграл.")
+    print("Диллер выиграл.")
 elif dealer_score > 21:
-        print("Вы выиграли!")
+    print("Вы выиграли!")
 else:
-        print("Диллер выиграл.")
+    print("Диллер выиграл.")
 print(f"Карты диллера: {dealer_score} карты игрока: {player_score}")
