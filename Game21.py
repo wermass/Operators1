@@ -24,7 +24,8 @@ while True:
         print("Вы выиграли! У вас 21.")
         break
     elif player_score > 21:
-        print("Перебор!")
+        print("Перебор! Диллер проиграл.")
+        break
     action = input("Хотите взять карту?(да/нет)")
     if action.lower() == "да":
         player_hand.append(get_card())
@@ -38,4 +39,10 @@ while True:
         break
     else:
         dealer_hand.append(get_card())
+    if player_score and dealer_score == 21:
+        print("Диллер выиграл.")
+    elif dealer_score > 21:
+        print("Вы выиграли!")
+    else:
+        print("Диллер выиграл.")
 print(f"Карты диллера: {dealer_score} карты игрока: {player_score}")
